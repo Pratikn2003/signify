@@ -3,12 +3,34 @@
 Welcome to **Signify**, a modern web application for secure digital signature verification and authentication.
 
 ## 📋 Table of Contents
+- [Quick Start](#-quick-start)
 - [About the Project](#about-the-project)
 - [Features](#features)
-- [How to Use](#how-to-use)
+- [How to Run This Project](#-how-to-run-this-project)
 - [Contact & Messaging](#contact--messaging)
 - [Quick Setup for Repository Owner](#quick-setup-for-repository-owner)
 - [Contributing](#contributing)
+
+## ⚡ Quick Start
+
+Get Signify running in 3 simple steps:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Pratikn2003/signify.git
+cd signify
+
+# 2. Open the website (choose one method)
+# Method A: Open index.html directly in your browser
+# Method B: Use Python's built-in server
+python -m http.server 8000
+
+# 3. Visit http://localhost:8000 in your browser
+```
+
+**That's it!** The website will run without any installation.
+
+For full functionality with the contact form, see [How to Run This Project](#-how-to-run-this-project) below.
 
 ## 🔍 About the Project
 
@@ -22,36 +44,94 @@ Signify is a digital signature verification platform that delivers intelligent a
 - **Enterprise-Grade Reliability**: Built for mission-critical applications
 - **User-Friendly Interface**: Clean, modern design for easy navigation
 
-## 🚀 How to Use
+## 🚀 How to Run This Project
 
-### Viewing the Website
+Signify can run in two modes: **Static Website** (no setup required) or **Full Application** (with backend for contact form).
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Pratikn2003/signify.git
-   cd signify
-   ```
+### Prerequisites
 
-2. **Open the website**:
-   - Simply open `index.html` in your web browser
-   - Or use a local web server:
-     ```bash
-     # Using Python 3
-     python -m http.server 8000
-     
-     # Using Node.js (http-server)
-     npx http-server
-     ```
+- **For Static Website**: Any modern web browser (Chrome, Firefox, Safari, Edge)
+- **For Full Application**: 
+  - Python 3.7 or higher
+  - pip (Python package manager)
 
-3. **Navigate the website**:
-   - **Home**: Learn about Signify's digital signature verification services
-   - **About**: Discover who we are and why choose Signify
-   - **Contact Us**: Send us a message or inquiry
+### Option 1: Static Website (Recommended for Quick View)
 
-### Using the Signature Features
+No installation required! Just open the website:
 
+```bash
+# Clone the repository
+git clone https://github.com/Pratikn2003/signify.git
+cd signify
+
+# Method A: Open directly in browser
+# Double-click index.html or right-click → Open with → Your Browser
+
+# Method B: Use Python's HTTP server (recommended)
+python -m http.server 8000
+# Then visit: http://localhost:8000
+
+# Method C: Use Node.js http-server
+npx http-server
+# Then visit: http://localhost:8080
+```
+
+**What works in static mode:**
+- ✅ Browse all website sections (Home, About, Contact)
+- ✅ View all content and images
+- ✅ Navigation and smooth scrolling
+- ✅ Dark mode toggle
+- ✅ Responsive design
+- ❌ Contact form (requires backend)
+
+### Option 2: Full Application (With Contact Form)
+
+To enable the contact form functionality:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Pratikn2003/signify.git
+cd signify
+
+# 2. Install Python dependencies
+pip install -r requirements.txt
+
+# 3. Configure email settings (edit .env file)
+# Update EMAIL_USER, EMAIL_PASSWORD, and RECEIVER_EMAIL
+
+# 4. Start the backend server
+python server.py
+# You should see: ✅ Server running on http://localhost:5000
+
+# 5. In a new terminal, start the frontend
+python -m http.server 8000
+
+# 6. Visit http://localhost:8000 in your browser
+```
+
+**What works in full mode:**
+- ✅ Everything from static mode
+- ✅ Fully functional contact form
+- ✅ Email notifications to support team
+- ✅ Auto-reply emails to users
+
+### Using the Website
+
+Once running, you can:
+- **Browse sections**: Navigate between Home, About, and Contact Us
 - **Add Signature**: Click the "Add Signature" button to add a digital signature to your document
 - **Verify Signature**: Click the "Verify Signature" button to verify an existing digital signature
+- **Contact Us**: Fill out the contact form to send messages (backend required)
+
+### Detailed Setup Instructions
+
+For more detailed instructions including:
+- VS Code setup
+- Troubleshooting
+- Deployment options
+- Email configuration
+
+See [INSTALL.md](INSTALL.md) for complete documentation.
 
 ## 💬 Contact & Messaging
 
