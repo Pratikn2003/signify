@@ -28,6 +28,7 @@
             <div class="nav-menu">
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
+                <a href="#how-to-use">How to Use</a>
                 <a href="#contact">Contact Us</a>
             </div>
 
@@ -92,6 +93,82 @@
         </div>
     </section>
 
+    <!-- HOW TO USE -->
+    <section id="how-to-use" class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">How to Use Signify</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color, #6366f1); margin-bottom: 1rem;">
+                        <i class="ri-questionnaire-line"></i> Getting Started
+                    </h3>
+                    <p style="line-height: 1.8;">
+                        Signify is a web-based platform for secure digital signature verification. 
+                        To get started, simply navigate through our website using the menu above.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color, #6366f1); margin-bottom: 1rem;">
+                        <i class="ri-edit-box-line"></i> Adding Signatures
+                    </h3>
+                    <p style="line-height: 1.8;">
+                        Click the "Add Signature" button on the home page to begin the process of adding 
+                        a digital signature to your documents. Our secure system ensures your signature 
+                        is protected with enterprise-grade encryption.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color, #6366f1); margin-bottom: 1rem;">
+                        <i class="ri-shield-check-line"></i> Verifying Signatures
+                    </h3>
+                    <p style="line-height: 1.8;">
+                        Use the "Verify Signature" button to authenticate existing digital signatures. 
+                        Our advanced fraud detection intelligence helps identify potential security risks 
+                        and ensures document integrity.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color, #6366f1); margin-bottom: 1rem;">
+                        <i class="ri-message-3-line"></i> Need Help or Have Questions?
+                    </h3>
+                    <p style="line-height: 1.8;">
+                        <strong>You can message us directly!</strong> Simply scroll to the 
+                        <a href="#contact" style="color: var(--primary-color, #6366f1); text-decoration: underline;">Contact Us</a> 
+                        section below and fill out the form with:
+                    </p>
+                    <ul style="line-height: 1.8; margin-top: 1rem; margin-left: 2rem;">
+                        <li>Your name</li>
+                        <li>Your email address (so we can respond)</li>
+                        <li>Your message or question</li>
+                    </ul>
+                    <p style="line-height: 1.8; margin-top: 1rem;">
+                        We'll receive your message directly and respond to your email as soon as possible. 
+                        You can ask about anything: technical support, integration help, business inquiries, 
+                        or general questions about using the project.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color, #6366f1); margin-bottom: 1rem;">
+                        <i class="ri-github-line"></i> For Developers
+                    </h3>
+                    <p style="line-height: 1.8;">
+                        This is an open-source project! You can view the code, contribute, or fork the 
+                        repository on GitHub at 
+                        <a href="https://github.com/Pratikn2003/signify" target="_blank" style="color: var(--primary-color, #6366f1); text-decoration: underline;">
+                            github.com/Pratikn2003/signify
+                        </a>. 
+                        Check the README file for detailed documentation on setup and development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <!--<section id="contact" class="section contact">
         <div class="container">
@@ -127,6 +204,11 @@
                     Reach out to us today <br>
                     and secure your digital trust
                 </h2>
+                
+                <p style="margin-bottom: 2rem; opacity: 0.9;">
+                    Have questions? Need help with the project? Fill out the form and we'll respond to your email address. 
+                    All messages are sent directly to the project maintainer.
+                </p>
 
                 <div class="contact-details">
                     <div class="contact-item">
@@ -147,25 +229,26 @@
                 </div>
             </div>
 
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent!')">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xyzypqgz" method="POST">
                 <div class="form-group">
-                    <input type="text" required>
+                    <input type="text" name="name" id="name" required>
                     <label>Your Name</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="email" required>
+                    <input type="email" name="email" id="email" required>
                     <label>Your Email</label>
                 </div>
 
                 <div class="form-group textarea">
-                    <textarea required></textarea>
+                    <textarea name="message" id="message" required></textarea>
                     <label>Your Message</label>
                 </div>
 
                 <button type="submit" class="btn-gradient">
                     Send Message <i class="ri-arrow-right-up-line"></i>
                 </button>
+                <div id="formStatus" style="margin-top: 1rem; text-align: center;"></div>
             </form>
 
         </div>
@@ -216,6 +299,51 @@
     <!-- External JS -->
     <script src="assets/js/home.js"></script>
     <script src="assets/js/animation.js"></script>
+    
+    <!-- Contact Form Handler -->
+    <script>
+        // Handle contact form submission
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.innerHTML;
+                
+                // Disable button and show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Sending... <i class="ri-loader-4-line"></i>';
+                formStatus.textContent = '';
+                
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        formStatus.innerHTML = '<p style="color: #4CAF50; font-weight: 500;">✓ Message sent successfully! We\'ll get back to you soon.</p>';
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    formStatus.innerHTML = '<p style="color: #f44336; font-weight: 500;">✗ Oops! There was a problem sending your message. Please try again or email us directly at support@signify.com</p>';
+                }
+                
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        }
+    </script>
 </body>
 
 </html>
