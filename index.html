@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/Signify_logo.png" type="image/x-icon" />
+    <title>Signify</title>
+
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="assets/css/home.css" />
+
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav>
+        <div class="container nav-wrapper">
+            <a href="#home" class="nav-logo" onclick="scrollHome()">
+                <img src="assets/img/Signify_logo.png" alt="Signify logo" class="nav-logo-img">
+                Signify
+            </a>
+
+
+            <div class="nav-menu">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+
+            <i class="ri-moon-line theme-toggle" id="themeToggle"></i>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Secure Digital Signature Verification</h1>
+                <p>
+                    Signify delivers intelligent authentication systems that ensure document
+                    integrity and eliminate fraudulent signature risks.
+                </p>
+                <div class="hero-buttons">
+                    <button>Add Signature</button>
+                    <button>Verify Signature</button>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="animation-container">
+                    <div class="signature">
+                        <img src="assets/img/Joachim_Gaucks_signature.svg" alt="Signature Animation" id="signature">
+                    </div>
+
+                    <div class="magnifier" id="magnifier">
+                        <div class="lens"></div>
+                        <div class="rim"></div>
+                        <div class="shine"></div>
+                        <div class="handle"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="assets/img/About.png" alt="About">
+            </div>
+
+            <div class="about-text">
+                <h2>Who we are &<br>why choose <span class="brand-name">Signify</span></h2>
+                <p>
+                    Signify modernizes digital authentication processes and strengthens trust
+                    in secure document verification systems.
+                </p>
+
+                <ul class="check-list">
+                    <li><i class="ri-checkbox-fill about__details-icon"></i>Advanced signature validation</li>
+                    <li><i class="ri-checkbox-fill about__details-icon"></i>Fraud detection intelligence</li>
+                    <li><i class="ri-checkbox-fill about__details-icon"></i>Secure cloud-based verification</li>
+                    <li><i class="ri-checkbox-fill about__details-icon"></i>Enterprise-grade reliability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <!--<section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>We’re here to help you implement secure digital verification.</p>
+                    <p>Reach out for integration support or business inquiries.</p>
+                    <p>Email: <a href="mailto:support@signify.com">support@signify.com</a></p>
+                </div>
+
+                <form onsubmit="event.preventDefault(); alert('Message Sent!')">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Signify. All rights reserved.
+    </footer>-->
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+        <div class="container contact-container">
+
+            <div class="contact-left">
+                <h2 class="contact-title">
+                    Reach out to us today <br>
+                    and secure your digital trust
+                </h2>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="ri-phone-line"></i>
+                        <div>
+                            <h4>Call us</h4>
+                            <p>+91 012 345 6789</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="ri-mail-line"></i>
+                        <div>
+                            <h4>Email us</h4>
+                            <p>support@signify.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent!')">
+                <div class="form-group">
+                    <input type="text" required>
+                    <label>Your Name</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" required>
+                    <label>Your Email</label>
+                </div>
+
+                <div class="form-group textarea">
+                    <textarea required></textarea>
+                    <label>Your Message</label>
+                </div>
+
+                <button type="submit" class="btn-gradient">
+                    Send Message <i class="ri-arrow-right-up-line"></i>
+                </button>
+            </form>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <div class="footer-col">
+                <h3 class="footer-logo">Signify</h3>
+                <p>Secure. Verify. Protect.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <p>About</p>
+                <p>Contact</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>support@signify.com</p>
+                <p>+91 012 345 6789</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="footer-social">
+                    <i class="ri-facebook-fill"></i>
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-twitter-x-line"></i>
+                    <i class="ri-linkedin-fill"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Signify. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <a href="#" class="scroll-up" id="scrollUp">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+
+    <!-- External JS -->
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/animation.js"></script>
+</body>
+
+</html>
