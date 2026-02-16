@@ -22,8 +22,9 @@ cd signify
 
 # 2. Open the website (choose one method)
 # Method A: Open index.html directly in your browser
-# Method B: Use Python's built-in server
-python -m http.server 8000
+# Method B: Use Python's built-in server (Python 3)
+python3 -m http.server 8000
+# Or just 'python' if it points to Python 3 on your system
 
 # 3. Visit http://localhost:8000 in your browser
 ```
@@ -68,7 +69,7 @@ cd signify
 # Double-click index.html or right-click → Open with → Your Browser
 
 # Method B: Use Python's HTTP server (recommended)
-python -m http.server 8000
+python3 -m http.server 8000
 # Then visit: http://localhost:8000
 
 # Method C: Use Node.js http-server
@@ -94,17 +95,17 @@ git clone https://github.com/Pratikn2003/signify.git
 cd signify
 
 # 2. Install Python dependencies
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # 3. Configure email settings (edit .env file)
 # Update EMAIL_USER, EMAIL_PASSWORD, and RECEIVER_EMAIL
 
 # 4. Start the backend server
-python server.py
+python3 server.py
 # You should see: ✅ Server running on http://localhost:5000
 
 # 5. In a new terminal, start the frontend
-python -m http.server 8000
+python3 -m http.server 8000
 
 # 6. Visit http://localhost:8000 in your browser
 ```
