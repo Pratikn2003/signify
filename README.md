@@ -88,9 +88,9 @@ The contact form is currently configured to use **Formspree**, a free email serv
 
 3. **Update the form action**:
    - Open `index.html`
-   - Find the line: `<form class="contact-form" id="contactForm" action="https://formspree.io/f/xyzypqgz" method="POST">`
-   - Replace `xyzypqgz` with your actual Formspree form ID
-   - Example: `action="https://formspree.io/f/YOUR_FORM_ID"`
+   - Find the line: `<form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">`
+   - Replace `YOUR_FORM_ID_HERE` with your actual Formspree form ID
+   - Example: `action="https://formspree.io/f/abc123xyz"`
 
 4. **Alternative: Use EmailJS or other services**:
    - [EmailJS](https://www.emailjs.com/) - Free email service

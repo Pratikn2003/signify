@@ -17,8 +17,8 @@ Your website now has a fully functional contact form! Here's how to start receiv
 
 3. **Update your website**:
    - Open `index.html`
-   - Find line ~157: `action="https://formspree.io/f/xyzypqgz"`
-   - Replace `xyzypqgz` with your form ID
+   - Find line ~241: `action="https://formspree.io/f/YOUR_FORM_ID_HERE"`
+   - Replace `YOUR_FORM_ID_HERE` with your actual form ID
    - Save the file
 
 4. **You're done!** 
@@ -52,16 +52,16 @@ Replace the form with a simple mailto link:
 ### Change Contact Information
 
 Edit the contact details in `index.html`:
-- Line ~136: Phone number
-- Line ~144: Email address
-- Lines 189-190: Footer contact info
+- Line ~220: Phone number
+- Line ~225: Email address
+- Lines ~330-335: Footer contact info
 
 ### Modify the Website Content
 
-- **Home section**: Lines 39-69
-- **About section**: Lines 72-93
-- **How to Use section**: Lines 96-162
-- **Contact section**: Lines 165-223
+- **Home section**: Lines ~39-69
+- **About section**: Lines ~72-93
+- **How to Use section**: Lines ~96-170
+- **Contact section**: Lines ~172-260
 
 ## 🌐 Publishing Your Website
 
