@@ -83,8 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = 'Sending...';
             
             try {
-                // Send to Python backend (Port 5000)
-                const response = await fetch('http://localhost:5000/api/contact', {
+                // Send to Python backend
+                // Use environment variable or fallback to localhost for development
+                const apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                    ? 'http://localhost:5000/api/contact'
+                    : '/api/contact';
+                
+                const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
